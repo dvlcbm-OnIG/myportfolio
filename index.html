@@ -112,7 +112,7 @@
           <label for="message">Message</label>
           <textarea id="message" rows="8" cols="40"></textarea>
           
-          <button type="submit">Submit</button>
+          <button id="submit" type="submit">Submit</button>
 
         </form>
       </div>
@@ -122,5 +122,25 @@
       <p>© 2025 Russel Sto.Tomas. All rights reserved.
       </p>
     </footer>-->
+  <script>
+  const submit = document.getElementById('submit');
+  
+  submit.addEventListener('click', function(e) {
+    e.preventDefault(); // prevent form from submitting
+    
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const message = document.getElementById('message');
+    
+    if (name.value.trim() === '' || email.value.trim() === '' || message.value.trim() === '') {
+      alert('Please fill out all the input fields.');
+    } else {
+      alert('Successfully submitted.');
+      name.value = '';
+      email.value = '';
+      message.value = '';
+    }
+  });
+</script>
 </body>
 </html>

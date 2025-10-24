@@ -15,12 +15,22 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
 }
+main{
+  height: 100vh;
+}
+@media(max-width: 600px){
+  main{
+  height: 100%;
+  }
+}
 
 /*NAVBAR*/
 nav{
   display: flex;
   justify-content: space-between;
   padding: 25px;
+  
+  
 }
 nav .left span {
   font-weight: bold;
@@ -59,32 +69,28 @@ nav .right i{
 .hero .left p{
   margin-bottom: 20px;
 }
-
 .hero .right img{
   height: 200px;
   border-radius: 50%;
   box-shadow: 2.5px 3px 3px 0px var(--link-color);
-  
 }
 @media(max-width: 600px){
   .hero{
-    gap: 50px;
-    align-items: start;
+    display: flex;
+    flex-direction: column-reverse;
   }
-  .hero .left h2, p{
-    font-size: 10px;
+  .scroll{
+    margin-left: 13px;
+  }
+  .hero{
+    margin-bottom: 170px;
   }
   .hero .right img{
-    height: 100px;
+    height: 250px;
   }
-  .hero .left p{
-    margin-bottom: 10px;
+  .hero .left p, h2{
+    padding: 0px 20px 20px 20px ;
   }
-  .hero .left a{
-    font-size: 7px;
-    
-  }
-  
 }
 
 /*SKILLS*/
@@ -109,6 +115,136 @@ nav .right i{
 .cell{
   border: 1px solid grey;
   padding: 8px 30px;
+  display: flex;
+  align-items: center;
+}
+.cell img{
+  height: 30px;
+  margin: 0px px;
+}
+@media(max-width: 600px){
+  .cells{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .cell{
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+  }
+  .cells{
+    margin: 70px 0px 120px 0px ;
+  }
+  #skills .text{
+    padding: 0px 20px;
+  }
+}
+
+/*TESTIMONY*/
+
+#test{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 250px;
+}
+.test{
+  display: flex;
+  padding: 0px 25px 25px 25px;
+  margin-top: 20px;
+  gap: 20px;
+}
+.test img{
+  height: 120px;
+  border-radius: 50% ;
+  margin-top: -10px;
+}
+.inTest{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  border: 1px solid grey;
+  border-radius: 25px;
+
+}
+.inTest span{
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+@media (max-width: 600px){
+  .test{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 30px 50px 30px;
+    gap: 60px;
+  }
+  .test img{
+    height: 90px;
+  }
+}
+
+/*Contact*/
+#contact{
+  padding: 25px;
+  margin-bottom: 200px;
+}
+#contact .group{
+  display: flex;
+  gap: 30px;
+}
+#contact .group .text{
+  width: 550px;
+  
+}
+#contact .group form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+#contact .group form input,
+#contact .group form textarea{
+  font-family: 'poppins', sans-serif;
+ padding: 15px;
+ margin-bottom: 20px;
+ border: 2px solid var(--link-color);
+ outline: none;
+}
+button{
+  background-color: var(--link-color);
+  color: #fff;
+  border: none;
+  padding: 15px;
+}
+@media(max-width: 600px){
+  #contact .group{
+    display: flex;
+    flex-direction: column;
+  }
+  #contact .group .text{
+    width: 100%;
+    margin: 10px 0px;
+  }
+}
+
+/*FOOTER*/
+footer{
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  margin-top: 200px;
+  color: var(--background-color);
+  background-color: grey;
+}
+@media(max-width: 600px){
+  footer{
+    padding: 15px;
+  }
+}  padding: 8px 30px;
   display: flex;
   align-items: center;
 }

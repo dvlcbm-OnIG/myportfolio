@@ -1,146 +1,111 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home</title>
 
-  <title>NiggaSaurus</title>
   <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
+  <!-- MENU -->
+  <section class="menu" id="menu">
+    <div class="nav">
+      <h1>RJ</h1>
+      <i id="menuClose" class="fa-solid fa-xmark"></i>
+    </div>
+    <article>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/projects.html">Projects</a></li>
+        <li><a href="/photos.html">Photos</a></li>
+        <li><a href="/aboutMe.html">About me</a></li>
+      </ul>
+    </article>
+  </section>
+
   <!-- NAVBAR -->
   <nav>
-    <div class="left"><span>Russel Jeoff</span></div>
+    <div class="left">
+      <span id="menuBar"><i class="fa-solid fa-bars"></i></span>
+      <span>RJ | Web Developer</span>
+    </div>
     <div class="right">
-      <a href="https://github.com/russeljeoff0310"><i class="fa-brands fa-github"></i><span>Github</span></a>
+      <a href="https://github.com/dvlcbm-OnIG"><i class="fa-brands fa-github"></i><span>Github</span></a>
       <a href="https://www.facebook.com/share/1CwHCYifUi/" target="_blank"><i class="fa-brands fa-facebook"></i><span>Facebook</span></a>
       <a href="https://www.instagram.com/dvlcbm?igsh=aDh3NzlzYzFxcjF2"><i class="fa-brands fa-instagram"></i><span>Instagram</span></a>
       <a href="mailto:russeljeoff2@gmail.com"><i class="fa-solid fa-envelope"></i><span>Email</span></a>
     </div>
   </nav>  
+
   <main>
-    <!-- SECTION 1 Hero -->
+
+    <!-- HERO -->
     <section class="hero" id="#hero">
-     <div class="left">
-      <h2>Hi, I'm Russel👋</h2>
-      <p>I am currently studying at Universidad de Zamboanga taking a course of BSIT. I enjoy coding in frontend development, and also I love working out. I started learning frontend during the summer after finishing senior high school, and I’m eager to keep improving and growing my skills.
-       </p>
-     <div class="scroll">
-       <a href="#skills"><i class="fa-solid fa-code"></i><span>Skills</span></a>
-       <a href="#test"><i class="fa-solid fa-users"></i><span>Testimony</span></a>
-       <a href="#contact"><i class="fa-solid fa-phone"></i><span>Contact</span></a>
-     </div>
-     </div>
-     <div class="right">
-      <a href="hero.jpg"><img src="hero.jpg" alt="hero_image"></a>
-     </div>
+      <div class="left">
+        <h2 id="typewriter"></h2>
+        <p>a first-year IT student who enjoys working out and coding, especially frontend development. I started learning frontend during the summer after finishing senior high school, and I’m eager to keep improving and growing my skills.</p>
+        <div class="scroll">
+          <a href="#skills"><i class="fa-solid fa-code"></i><span>Skills</span></a>
+          <a href="#test"><i class="fa-solid fa-users"></i><span>Testimony</span></a>
+          <a href="#contact"><i class="fa-solid fa-phone"></i><span>Contact</span></a>
+        </div>
+      </div>
+      <div class="right">
+        <a href="img/hero.jpg"><img src="img/hero.jpg" alt="hero_image"></a>
+      </div>
     </section>
-    
-    <!-- SECTION 2 skills -->
+
+    <!-- SKILLS -->
     <section id="skills">
       <h1>Skills</h1>
-      <div class="text">I’ve been learning HTML and CSS on my own, which helped me understand how to build and style web pages. I also know a little about JavaScript and I’m still exploring it to improve my frontend skills. In school, we’re learning C++, so I’ve gained a moderate understanding of programming fundamentals through it.
+      <div class="text">
+        I’ve been learning HTML and CSS on my own, which helped me understand how to build and style web pages. I also know a little about JavaScript and I’m still exploring it to improve my frontend skills. In school, we’re learning C++, so I’ve gained a moderate understanding of programming fundamentals through it.
       </div>
       <div class="cells">
-        <div class="cell">
-          <img src="html.png" alt="">
-          <span>HTML</span>
-        </div>
-        <div class="cell">
-          <img src="css.png" alt="">
-          <span>CSS</span>
-        </div>
-        <div class="cell">
-          <img src="js.png" alt="">
-          <span>Javascript</span>
-        </div>
-        <div class="cell">
-          <img src="cpp.png" alt="">
-          <span>C++</span>
-        </div>
+        <div class="cell"><i class="fa-brands fa-html5" style="color: orangered;"></i><span>HTML</span></div>
+        <div class="cell" style="color: mediumblue;"><i class="fa-brands fa-css3-alt"></i><span>CSS</span></div>
+        <div class="cell"><i class="fa-brands fa-js" style="color: yellow;"></i><span>Javascript</span></div>
+        <div class="cell"><img src="image-skills/cpp.png" alt=""><span>C++</span></div>
       </div>
     </section>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <!-- SECTION 4 TESTIMONY-->
+
+    <!-- TESTIMONY -->
     <section id="test">
       <h1>Testimony</h1>
       <div class="test">
-        <div class="inTest"><a href="mar.jpeg"><img src="mar.jpeg" alt=""></a>
-        <span>Almar</span>
-        <p>"Russel may still be starting out in web development, but his determination and consistency are impressive. He’s always eager to learn, contributes ideas, and never gives up until he understands the problem."
-        </p>
-        </div>
-        <div class="inTest"><a href="shane.jpeg"><img src="shane.jpeg" alt=""></a>
-        <span>Shane</span>
-        <p>"Russel shows great potential as a future developer. Despite being at the early stages of his journey, he approaches every task with focus and a strong willingness to improve. His consistency sets him apart from many beginners."</p>
-        </div>
-        <div class="inTest"><a href="far.jpg"><img src="far.jpg" alt=""></a>
-        <span>Farhan</span>
-        <p>"Russel is someone who doesn’t back down from challenges. As a beginner myself, I’ve seen how dedicated he is to learning and improving every day. He’s definitely someone to watch as he grows in this field."</p>
-        </div>
-        <div class="inTest"><a href="bob.jpeg"><img src="bob.jpeg" alt=""></a>
-          <span>Bobby</span>
-          <p>"Russel handled our project with consistency and a strong work ethic. While still learning the ropes, he always gives his best and ensures every task is completed on time."</p>
-        </div>
+        <div class="inTest"><a href="img/mar.jpeg"><img src="img/mar.jpeg" alt=""></a><span>Almar</span><p>"Russel may still be starting out in web development, but his determination and consistency are impressive. He’s always eager to learn, contributes ideas, and never gives up until he understands the problem."</p></div>
+        <div class="inTest"><a href="img/shane.jpeg"><img src="img/shane.jpeg" alt=""></a><span>Shane</span><p>"Russel shows great potential as a future developer. Despite being at the early stages of his journey, he approaches every task with focus and a strong willingness to improve. His consistency sets him apart from many beginners."</p></div>
+        <div class="inTest"><a href="img/far.jpg"><img src="img/far.jpg" alt=""></a><span>Farhan</span><p>"Russel is someone who doesn’t back down from challenges. As a beginner myself, I’ve seen how dedicated he is to learning and improving every day. He’s definitely someone to watch as he grows in this field."</p></div>
+        <div class="inTest"><a href="img/bob.jpeg"><img src="img/bob.jpeg" alt=""></a><span>Bobby</span><p>"Russel handled our project with consistency and a strong work ethic. While still learning the ropes, he always gives his best and ensures every task is completed on time."</p></div>
       </div>
     </section>
-    
-    <!-- SECTION 5 CONTACT -->
+
+    <!-- CONTACT -->
     <section id="contact">
       <h1>Contact</h1>
       <div class="group">
-        <div class="text">
-          Feel free to leave feedback or suggestions to help me improve.
-        </div>
-        <form >
+        <div class="text">Feel free to leave feedback or suggestions to help me improve.</div>
+        <form>
           <label for="text">Name</label>
           <input type="text" id="name" placeholder="Last Name / First Name / Middle Name" required>
-          
           <label for="email">Email</label>
           <input type="email" id="email" placeholder="example@gmail.com" required>
-          
           <label for="message">Message</label>
           <textarea id="message" rows="8" cols="40"></textarea>
-          
-          <button id="submit" type="submit">Submit</button>
-
+          <button id="submit" type="submit"><span>Submit</span></button>
         </form>
       </div>
     </section>
+
   </main>
-     <!-- <footer>
-      <p>© 2025 Russel Sto.Tomas. All rights reserved.
-      </p>
-    </footer>-->
-  <script>
-  const submit = document.getElementById('submit');
-  
-  submit.addEventListener('click', function(e) {
-    e.preventDefault(); // prevent form from submitting
-    
-    const name = document.getElementById('name');
-    const email = document.getElementById('email');
-    const message = document.getElementById('message');
-    
-    if (name.value.trim() === '' || email.value.trim() === '' || message.value.trim() === '') {
-      alert('Please fill out all the input fields.');
-    } else {
-      alert('Successfully submitted.');
-      name.value = '';
-      email.value = '';
-      message.value = '';
-    }
-  });
-</script>
+
+  <script src="script.js"></script>
 </body>
 </html>

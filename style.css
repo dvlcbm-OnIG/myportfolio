@@ -39,7 +39,9 @@ p, a, li {
 main {
   height: 100vh;
 }
-
+p{
+  font-size: 1.5em;
+}
 @media (max-width: 600px) {
   main {
     height: 100%;
@@ -123,7 +125,7 @@ main {
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 17px;
+  padding: 25px;
   border-bottom: 1px solid grey;
   background-color: var(--stroke);
 }
@@ -134,10 +136,13 @@ nav .left i {
 
 nav .left span {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 2em;
   color: var(--head);
 }
+nav .right{
 
+  
+}
 nav .right a {
   margin: 0 5px;
   text-decoration: none;
@@ -153,6 +158,11 @@ nav .right a:hover {
 
 nav .right i {
   margin-right: 3px;
+  margin-left: 10px;
+  font-size: 1.5em;
+}
+nav .right span{
+   font-size: 1.5em;
 }
 
 @media (max-width: 600px) {
@@ -207,10 +217,17 @@ nav .right i {
 }
 .hero .left i{
   margin-right: 5px;
+  font-size: 1.5em;
+}
+.hero .left span{
+  font-size: 1.5em;
 }
 
 .hero .left h2 {
-  min-height: 1.9em;
+ height: 50px;
+  font-size: 2em;
+  margin-bottom: 20px;
+  
 }
 
 .hero .left p {
@@ -231,7 +248,7 @@ h1,
 }
 
 .hero .right img {
-  height: 200px;
+  height: 320px;
   border-radius: 50%;
   box-shadow: 2.5px 3px 9px 0px var(--btn);
    transition: transform 0.3s ease;

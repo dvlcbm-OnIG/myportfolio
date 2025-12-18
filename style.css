@@ -2,7 +2,7 @@
   --body: #16161a;
   --head: #fffffe;
   --par: #94a1b2;
-  --btn: #7f5af0;
+  --btn:#7f5af0 ;
   --btnText: #fffffe;
   --second: #72757e;
   --stroke: #010101;
@@ -57,17 +57,28 @@ p{
   height: 100%;
   width: 33%;
   /* background-color: rgba(73, 73, 85, 1); */
-  background-color: var(--card);
+  background-color: var(--btn);
   padding: 10px;
   transform: translateX(-100%);
   transition: transform 0.3s ease;
   border-radius: 0px 5px 5px 0px;
   border-right: 1px solid white;
+
+  pointer-events: auto;
+  z-index: 10000;
 }
 
 .menu.show {
   transform: translateX(0);
   transition: transform 0.5s ease;
+}
+body > *:not(.menu) {
+  transition: filter 0.4s ease;
+}
+body.menu-open > *:not(.menu){
+  filter: blur(3px) ;
+ pointer-events: none;
+
 }
 
 .menu .nav {
@@ -118,7 +129,7 @@ p{
   transition: transform 0.3s ease; /* smoother animation */
 }
 #menuBar i:hover {
-  transform: scale(1.14);
+
   
 }
 /* NAVBAR */
@@ -248,7 +259,7 @@ h1,
 }
 
 .hero .right img {
-  height: 320px;
+  height: 250px;
   border-radius: 50%;
   box-shadow: 2.5px 3px 9px 0px var(--btn);
    transition: transform 0.3s ease;

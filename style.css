@@ -128,10 +128,6 @@ body.menu-open > *:not(.menu){
   display: inline-block; /* needed for transform */
   transition: transform 0.3s ease; /* smoother animation */
 }
-#menuBar i:hover {
-
-  
-}
 /* NAVBAR */
 nav {
   display: flex;

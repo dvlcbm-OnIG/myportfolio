@@ -66,6 +66,7 @@ p{
 
   pointer-events: auto;
   z-index: 10000;
+ 
 }
 
 .menu.show {
@@ -100,6 +101,11 @@ body.menu-open > *:not(.menu){
   justify-content: space-evenly;
 }
 
+ .feature li{
+  font-size: 10px;
+  margin-left: 10px;
+}
+
 .menu li {
   width: 100%;
 }
@@ -110,7 +116,7 @@ body.menu-open > *:not(.menu){
 
 .menu article a {
   text-decoration: none;
-  color: var(--btn);
+  color: var(--par);
 }
 
 .menu .fa-github {
@@ -208,9 +214,7 @@ nav .right span{
   
  
 }
-.hero .right{
- 
-}
+
 .hero .left a {
   text-decoration: none;
   padding: 5px;

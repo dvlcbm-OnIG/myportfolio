@@ -40,7 +40,7 @@ function typeEffect() {
     setTimeout(typeEffect, erasingSpeed);
   }
   else if (!isDeleting && i === text.length) {
-    element.innerHTML = text + '<span class="wave">👋</span>';
+    element.innerHTML = text + '<span class="wave" style="font-size: 2rem;">👋</span>';
     isDeleting = true;
     setTimeout(typeEffect, delayBetween + 1000);
   }

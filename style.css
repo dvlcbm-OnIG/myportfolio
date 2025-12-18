@@ -204,6 +204,8 @@ nav .right span{
 
   padding: 20px;
   border-radius: 10px;
+  
+  
  
 }
 .hero .right{
@@ -213,7 +215,7 @@ nav .right span{
   text-decoration: none;
   padding: 5px;
   border-radius: 5px;
-  margin: 0px 5px;
+  margin-right: 10px;
   color: var(--btnText);
   background-color: var(--btn);
   display: inline-block; /* needed for transform */
@@ -239,6 +241,7 @@ nav .right span{
 
 .hero .left p {
   margin-bottom: 20px;
+ 
 }
 
 #typewriter {
@@ -269,6 +272,7 @@ h1,
   .hero {
     display: flex;
     flex-direction: column-reverse;
+   
   }
 
   .scroll {
@@ -281,12 +285,15 @@ h1,
 
   .hero .right img {
     height: 250px;
-    margin-top: 70px;
+    margin-top: -75px;
   }
-
+   .hero .left{
+    margin-top: -60px;
+   }
   .hero .left p,
   h2 {
     padding: 0px 20px 20px 20px;
+    text-align: justify;
   }
   .hero .left i, 
   .hero .left span{
@@ -302,6 +309,7 @@ h1,
   align-items: center;
   margin-bottom: 200px;
   width: 100%;
+  
 }
 
 

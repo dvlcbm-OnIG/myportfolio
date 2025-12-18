@@ -288,6 +288,10 @@ h1,
   h2 {
     padding: 0px 20px 20px 20px;
   }
+  .hero .left i, 
+  .hero .left span{
+    font-size: 1.3rem;
+  }
 }
 
 /* SKILLS */

@@ -1,3 +1,15 @@
+const dayHero = document.querySelector('.dayhero')
+const dayHeroShy = document.querySelector('.dayheroShy')
+
+dayHero.addEventListener('mouseover', function(){
+  dayHeroShy.classList.add('show')
+  dayHero.classList.add('hide')
+})
+dayHeroShy.addEventListener('mouseout', function(){
+  dayHeroShy.classList.remove('show')
+  dayHero.classList.remove('hide')
+})
+
 const menu = document.getElementById('menu')
   const menuBar = document.getElementById('menuBar')
 const menuClose = document.getElementById('menuClose')

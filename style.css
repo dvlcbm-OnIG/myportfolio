@@ -267,18 +267,32 @@ h1,
 .cell span {
   color: var(--head);
 }
+.hero .right{
+  padding: 20px;
+  display: flex;
 
+}
 .hero .right img {
   height: 250px;
   border-radius: 50%;
   box-shadow: 2.5px 3px 9px 0px var(--btn);
-   transition: transform 0.3s ease;
+  
 }
-.hero .right img:hover{
-  transform: scale(1.1, 1.1);
-  transition: transform 0.3s ease;
+/*hover effect on hero img*/
+.hero .right .dayheroShy{
+  display: none;
+}
+.hero .right .dayheroShy.show{
+  display: flex;
+}
+.hero .right .dayhero.hide{
+  display: none;
 }
 
+/*.hero .right img:hover{
+  transform: scale(1.1, 1.1);
+  transition: transform 0.3s ease;
+}*/
 @media (max-width: 600px) {
   .hero {
     display: flex;

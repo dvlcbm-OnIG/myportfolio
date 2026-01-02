@@ -109,6 +109,16 @@ p{
 #menuClose {
   color: white;
 }
+#moon{
+  color: white;
+   font-size: 2em;
+    display: none;
+}
+
+#sun{
+ color: white;
+ font-size: 2em;
+}
 
 #menuBar i {
   border: 1px solid #1F1F1F;
@@ -139,10 +149,7 @@ nav .left span {
   font-size: 2em;
   color: var(--head);
 }
-nav .right{
 
-  
-}
 nav .right a {
   margin: 0 5px;
   text-decoration: none;
@@ -199,9 +206,7 @@ nav .right span{
   border-radius: 10px;
  
 }
-.hero .right{
- 
-}
+
 .hero .left a {
   text-decoration: none;
   padding: 5px;

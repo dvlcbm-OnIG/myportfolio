@@ -17,6 +17,32 @@ document.addEventListener('click', (e) => {
   }
 })
 
+
+// Dark Mode Toggle
+const moon = document.getElementById('moon');
+const sun = document.getElementById('sun');
+const body = document.body;
+let isDarkMode = true;
+moon.addEventListener('click', function(){
+  body.classList.add('dark-mode');
+  moon.style.display = 'none';
+  sun.style.display = 'block';
+  document.body.style.transition = "background-color 0.5s ease";
+  document.body.style.backgroundColor = " #16161a";
+  isDarkMode = true;
+})
+
+sun.addEventListener('click', function(){
+  body.classList.remove('dark-mode');
+  sun.style.display = 'none';
+  moon.style.display = 'block';
+  isDarkMode = false;
+    document.body.style.transition = "background-color 0.5s ease";
+  document.body.style.backgroundColor = " #ffffff";
+})
+
+
+
 /*Typewriter*/  
 const text = "Hi, I'm Russel ";
 const element = document.getElementById("typewriter");

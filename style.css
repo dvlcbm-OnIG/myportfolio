@@ -244,7 +244,7 @@ body.menu-open > *:not(.menu){
   padding: 25px;
   border-bottom: 2px solid var(--stroke);
   background-color: var(--stroke);
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 1;

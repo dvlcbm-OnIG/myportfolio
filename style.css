@@ -291,12 +291,12 @@ body.menu-open > *:not(.menu){
 #moon{
   color: white;
    font-size: 2em;
-    display: none;
 }
 
 #sun{
  color: white;
  font-size: 2em;
+ display: none;
 }
 
 #menuBar i {

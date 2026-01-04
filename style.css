@@ -156,11 +156,13 @@ p{
   border-radius: 0px 5px 5px 0px;
   border-right: 1px solid white;
   pointer-events: auto;
-  z-index: 10000;
+  top: 0;
+  z-index: 2;
 }
 
 .menu.show {
   transform: translateX(0);
+  z-index: 2;
 }
 body > *:not(.menu) {
   transition: filter 0.4s ease;
@@ -236,25 +238,33 @@ body.menu-open > *:not(.menu){
   transition: transform 0.3s ease; /* smoother animation */
 }
 /* NAVBAR */
-nav {
+.main-nav {
   display: flex;
   justify-content: space-between;
   padding: 25px;
   border-bottom: 2px solid var(--stroke);
   background-color: var(--stroke);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
+.main-nav .right{
+  display: flex;
+  align-items: center;
 
-nav .left i {
+}
+.main-nav .left i {
   margin-right: 10px;
 }
 
-nav .left span {
+.main-nav .left span {
   font-weight: bold;
   font-size: 2em;
   color: var(--head);
 }
 
-nav .right a {
+.main-nav .right a {
   margin: 0 5px;
   text-decoration: none;
   color: var(--head);
@@ -262,30 +272,30 @@ nav .right a {
   transition: transform 0.3s ease; /* smoother animation */
 }
 
-nav .right a:hover {
+.main-nav .right a:hover {
   transform: scale(1.1);
   color: var(--btn);
 }
 
-nav .right i {
+.main-nav .right i {
   margin-right: 3px;
   margin-left: 10px;
   font-size: 1.5em;
 }
-nav .right span{
+.main-nav .right span{
    font-size: 1.5em;
 }
 
 @media (max-width: 600px) {
-  nav .left span {
+  .main-nav .left span {
     font-size: 15px;
   }
 
-  nav .right span {
+  .main-nav .right span {
     display: none;
   }
 
-  nav .left i {
+  .main-nav .left i {
     margin-right: 10px;
   }
 
@@ -301,7 +311,7 @@ nav .right span{
   gap: 100px;
   align-items: center;
   justify-content: space-between;
-  margin-top: 100px;
+  margin-top: 120px;
   margin-bottom: 20px;
 }
 .hero .left {

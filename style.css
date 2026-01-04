@@ -9,6 +9,163 @@
   --card: #242629;
 }
 
+/* Light Mode - Modern Design */
+body:not(.dark-mode) {
+  --body: #f5f7fa;
+  --head: #1a202c;
+  --par: #4a5568;
+  --btn: #6366f1;
+  --btnText: #ffffff;
+  --second: #718096;
+  --stroke: #e2e8f0;
+  --card: #ffffff;
+}
+
+/* Light Mode Specific Styles */
+body:not(.dark-mode) nav {
+  border-bottom: 2px solid #e2e8f0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #eff2f5 100%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+body:not(.dark-mode) .menu {
+  background: linear-gradient(180deg, #6366f1 0%, #4f46e5 100%);
+  box-shadow: 4px 0 30px rgba(99, 102, 241, 0.3);
+}
+
+body:not(.dark-mode) .hero .hero-right img {
+  box-shadow: 
+    0 20px 40px rgba(99, 102, 241, 0.25),
+    0 0 80px rgba(99, 102, 241, 0.15),
+    inset -2px -2px 8px rgba(0, 0, 0, 0.1);
+  border: 3px solid #ffffff;
+  filter: drop-shadow(0 15px 35px rgba(99, 102, 241, 0.2));
+}
+
+body:not(.dark-mode) .hero .hero-right img:hover {
+  filter: drop-shadow(0 20px 45px rgba(99, 102, 241, 0.3)) brightness(1.05);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+body:not(.dark-mode) .cell {
+  border: 1px solid #e2e8f0;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+  border-radius: 12px;
+}
+
+body:not(.dark-mode) .cell:hover {
+  box-shadow: 0 12px 30px rgba(99, 102, 241, 0.2);
+  border-color: #6366f1;
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+}
+
+body:not(.dark-mode) .inTest {
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+  border-radius: 20px;
+}
+
+body:not(.dark-mode) .inTest:hover {
+  box-shadow: 0 16px 40px rgba(99, 102, 241, 0.15);
+}
+
+body:not(.dark-mode) #contact .group form input,
+body:not(.dark-mode) #contact .group form textarea {
+  border: 2px solid #e2e8f0;
+  background-color: #f9fafb;
+  color: var(--head);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+body:not(.dark-mode) #contact .group form input:focus,
+body:not(.dark-mode) #contact .group form textarea:focus {
+  border-color: #6366f1;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  outline: none;
+}
+
+body:not(.dark-mode) footer {
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+  color: var(--head);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+}
+
+body:not(.dark-mode) button {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+body:not(.dark-mode) button:hover {
+  box-shadow: 0 12px 30px rgba(99, 102, 241, 0.4);
+  transform: translateY(-2px);
+}
+
+body:not(.dark-mode) .hero .left a {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.25);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+body:not(.dark-mode) .hero .left a:hover {
+  box-shadow: 0 10px 28px rgba(99, 102, 241, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Dark Mode - Hover Animations Only */
+body.dark-mode .hero .hero-right img {
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+body.dark-mode .cell {
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .cell:hover {
+  transform: translateY(-4px);
+}
+
+body.dark-mode .inTest {
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .inTest:hover {
+  transform: translateY(-3px);
+}
+
+body.dark-mode button {
+  transition: all 0.3s ease;
+}
+
+body.dark-mode button:hover {
+  transform: translateY(-2px);
+}
+
+body.dark-mode .hero .left a {
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .hero .left a:hover {
+  transform: translateY(-2px);
+}
+
+body.dark-mode #contact .group form input,
+body.dark-mode #contact .group form textarea {
+  transition: all 0.3s ease;
+}
+
+body.dark-mode #contact .group form input:focus,
+body.dark-mode #contact .group form textarea:focus {
+  outline: none;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -111,7 +268,12 @@ body.menu-open > *:not(.menu){
 }
 
 .menu article li:hover {
-  background-color: #9E9E9E;
+  background-color: rgb(0, 0, 0);
+}
+.menu article #moon:hover,
+.menu article #sun:hover{
+  background-color: rgb(0, 0, 0);
+  ;
 }
 
 .menu article a {
@@ -267,26 +429,34 @@ h1,
 .cell span {
   color: var(--head);
 }
-.hero .right{
-  padding: 20px;
+.hero .hero-right{
   display: flex;
-
+  border-radius: 50%;
+  margin-right: 20px;
 }
-.hero .right img {
+.hero .hero-right img {
   height: 250px;
   border-radius: 50%;
-  box-shadow: 2.5px 3px 9px 0px var(--btn);
+  
+  box-shadow: 
+    0 20px 40px rgba(99, 102, 241, 0.25),
+    0 0 80px rgba(99, 102, 241, 0.15),
+    inset -2px -2px 8px rgba(0, 0, 0, 0.1);
+  border: 3px solid black;
   
 }
 /*hover effect on hero img*/
-.hero .right .dayheroShy{
+.hero .hero-right #dayheroShy,
+.hero .hero-right #dayhero,
+.hero .hero-right #nightheroShy,
+.hero .hero-right #nighthero{
   display: none;
 }
-.hero .right .dayheroShy.show{
+.hero .hero-right #dayheroShy.show,
+.hero .hero-right #dayhero.show,
+.hero .hero-right #nightheroShy.show,
+.hero .hero-right #nighthero.show{
   display: flex;
-}
-.hero .right .dayhero.hide{
-  display: none;
 }
 
 /*.hero .right img:hover{

@@ -1,15 +1,99 @@
-const dayHero = document.querySelector('.dayhero')
-const dayHeroShy = document.querySelector('.dayheroShy')
+// ============================================
+// Dark Mode Toggle
+// ============================================
+const moon = document.getElementById('moon');
+const sun = document.getElementById('sun');
+const body = document.body;
 
-dayHero.addEventListener('mouseover', function(){
-  dayHeroShy.classList.add('show')
-  dayHero.classList.add('hide')
-})
-dayHeroShy.addEventListener('mouseout', function(){
-  dayHeroShy.classList.remove('show')
-  dayHero.classList.remove('hide')
-})
+let isDarkMode = false;
 
+// ============================================
+// Hero Image Elements
+// ============================================
+const rightCont = document.querySelector('.hero-right');
+const dayHero = document.getElementById('dayhero');
+const dayHeroShy = document.getElementById('dayheroShy');
+const nightHero = document.getElementById('nighthero');
+const nightHeroShy = document.getElementById('nightheroShy');
+
+// ============================================
+// Initialize Hero Images
+// ============================================
+function initializeHeroImages() {
+  if (isDarkMode === true) {
+    nightHero.classList.add('show');
+    dayHero.classList.remove('show');
+  }else{
+    nightHero.classList.remove('show');
+    dayHero.classList.add('show');
+  }
+}
+initializeHeroImages();
+
+//mouseover
+function showShyHero() {
+  if (isDarkMode === true) {
+    dayHero.classList.remove('show');
+    dayHeroShy.classList.remove('show');
+    nightHeroShy.classList.add('show');
+    nightHero.classList.remove('show');
+  } else {
+    nightHero.classList.remove('show');
+    nightHeroShy.classList.remove('show');
+    dayHero.classList.remove('show');
+    dayHeroShy.classList.add('show');
+  }
+}
+
+//mouseout
+function showDefaultHero() {
+  if (isDarkMode === true) {
+    nightHero.classList.add('show');
+    nightHeroShy.classList.remove('show');
+  } else {
+    dayHero.classList.add('show');
+    dayHeroShy.classList.remove('show');
+  }
+}
+
+rightCont.addEventListener('mouseover', showShyHero);
+rightCont.addEventListener('mouseout', showDefaultHero);
+
+// ============================================
+// Dark Mode Functions
+// ============================================
+function darkModeBG() {
+  isDarkMode = true;
+  body.classList.add('dark-mode');
+  moon.style.display = 'none';
+  sun.style.display = 'block';
+  document.body.style.transition = "background-color 0.5s ease";
+  document.body.style.backgroundColor = "#16161a";
+  dayHero.classList.remove('show');
+  nightHero.classList.add('show');
+}
+
+function lightModeBG() {
+  isDarkMode = false;
+  body.classList.remove('dark-mode');
+  sun.style.display = 'none';
+  moon.style.display = 'block';
+  document.body.style.transition = "background-color 0.5s ease";
+  document.body.style.backgroundColor = "#ffffff";
+  dayHero.classList.add('show');
+  nightHero.classList.remove('show');
+}
+
+moon.addEventListener('click', darkModeBG);
+sun.addEventListener('click', lightModeBG);
+
+
+
+
+
+
+
+//Menu Section
 const menu = document.getElementById('menu')
   const menuBar = document.getElementById('menuBar')
 const menuClose = document.getElementById('menuClose')
@@ -32,28 +116,6 @@ document.addEventListener('click', (e) => {
 })
 
 
-// Dark Mode Toggle
-const moon = document.getElementById('moon');
-const sun = document.getElementById('sun');
-const body = document.body;
-let isDarkMode = true;
-moon.addEventListener('click', function(){
-  body.classList.add('dark-mode');
-  moon.style.display = 'none';
-  sun.style.display = 'block';
-  document.body.style.transition = "background-color 0.5s ease";
-  document.body.style.backgroundColor = " #16161a";
-  isDarkMode = true;
-})
-
-sun.addEventListener('click', function(){
-  body.classList.remove('dark-mode');
-  sun.style.display = 'none';
-  moon.style.display = 'block';
-  isDarkMode = false;
-    document.body.style.transition = "background-color 0.5s ease";
-  document.body.style.backgroundColor = " #ffffff";
-})
 
 
 
@@ -159,7 +221,6 @@ if (nameVal === '' && emailVal === '' && messageVal === '') {
 
     },2000)
   });
-  
-  
-  
-  
+
+
+

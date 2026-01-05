@@ -96,13 +96,20 @@
       <h1>Contact</h1>
       <div class="group">
         <div class="text">Feel free to leave feedback or suggestions to help me improve.</div>
-        <form>
-          <label for="text">Name</label>
-          <input type="text" id="name" placeholder="Last Name / First Name / Middle Name" required>
+        <form class="contact-form">
+          <div class="form-group">
+            <input type="text" id="name" placeholder=" " required>
+            <label for="text">Name</label>
+          </div>
+          <div class="form-group">
+          <input type="email" id="email" placeholder=" " required>
           <label for="email">Email</label>
-          <input type="email" id="email" placeholder="example@gmail.com" required>
-          <label for="message">Message</label>
-          <textarea id="message" rows="8" cols="40"></textarea>
+          </div>
+          <div class="form-group">
+            <textarea id="message" placeholder=" " rows="8"></textarea>
+            <label for="message" >Message</label>
+          
+          </div>
           <button id="submit" type="submit"><span>Submit</span></button>
         </form>
       </div>

@@ -74,8 +74,8 @@ body:not(.dark-mode) #contact .group form textarea {
 body:not(.dark-mode) #contact .group form input:focus,
 body:not(.dark-mode) #contact .group form textarea:focus {
   border-color: #6366f1;
-  background-color: #ffffff;
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  background-color: #f5f7fa;
+  /*box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);*/
 }
 
 body:not(.dark-mode) footer {
@@ -402,7 +402,7 @@ h1,
   transition: transform 0.3s ease;
 }*/
 @media (max-width: 600px) {
-  .hero {
+  .hero{
     flex-direction: column-reverse;
     margin-bottom: 170px;
   }
@@ -586,27 +586,51 @@ text-align: center;
   width: 550px;
 }
 
-#contact .group form {
+#contact .group .contact-form {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-
-#contact .group form input,
-#contact .group form textarea {
-  font-family: 'poppins', sans-serif;
-  padding: 15px;
-  margin-bottom: 20px;
-  border: 2px solid var(--background-accent);
-  outline: none;
-  border-radius: 8px;
-  color: var(--head);
-  transition: all 0.3s ease;
+.contact-form .form-group{
+  display: flex;
+  position: relative;
+}
+.contact-form .form-group label{
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  background-color: var(--body);
+  padding: 0px 5px;
+  transition: 0.2s ease;
+}
+.contact-form .form-group input:focus + label,
+.contact-form .form-group input:not(:placeholder-shown) + label,
+.contact-form .form-group textarea:focus + label,
+.contact-form .form-group textarea:not(:placeholder-shown) + label{
+  transform: translateY(-23px);
+  color: #6366f1;
 }
 
-#contact .group form input:focus,
-#contact .group form textarea:focus {
+#contact .contact-form input,
+#contact .contact-form textarea{
+  font-family: 'poppins', sans-serif;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border: 2px solid var(--btnText
+);
   outline: none;
+  border-radius: 8px;
+  color: black;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: var(--body);
+}
+
+#contact .group .contact-form input:focus,
+#contact .group .contact-form textarea:focus {
+  outline: none;
+  border-color: var(--btn);
 }
 
 button {

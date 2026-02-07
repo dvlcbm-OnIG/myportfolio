@@ -134,7 +134,7 @@ main {
 p{
   font-size: 1.5em;
 }
-@media (max-width: 600px) {
+@media (max-width: 912px) {
   main {
     height: 100%;
   }
@@ -286,7 +286,7 @@ body.menu-open > *:not(.menu){
    font-size: 1.5em;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 912px) {
   .main-nav .left span {
     font-size: 15px;
   }
@@ -401,7 +401,7 @@ h1,
   transform: scale(1.1, 1.1);
   transition: transform 0.3s ease;
 }*/
-@media (max-width: 600px) {
+@media (max-width: 912px) {
   .hero{
     flex-direction: column-reverse;
     margin-bottom: 170px;
@@ -486,7 +486,7 @@ text-align: center;
   margin: 0px px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 912px) {
   .cells {
     flex-direction: column;
     gap: 30px;
@@ -555,7 +555,7 @@ text-align: center;
   transform: translateY(-3px);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 912px) {
   .test {
     flex-direction: column;
     padding: 50px 30px;
@@ -646,7 +646,7 @@ button:hover {
   transform: translateY(-2px);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 912px) {
   #contact .group {
     flex-direction: column;
   }
@@ -667,7 +667,7 @@ footer {
   background-color: grey;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 912px) {
   footer {
     padding: 15px;
   }

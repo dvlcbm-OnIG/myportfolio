@@ -510,6 +510,7 @@ text-align: center;
   flex-direction: column;
   align-items: center;
   margin-bottom: 250px;
+  padding-top: 100px;
 }
 
 .test {
@@ -570,6 +571,7 @@ text-align: center;
 /* CONTACT */
 #contact {
   padding: 25px;
+  padding-top: 100px;
   margin-bottom: 200px;
 }
 #contact h1{

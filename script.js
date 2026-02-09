@@ -71,6 +71,7 @@ function darkModeBG() {
   document.body.style.backgroundColor = "#16161a";
   dayHero.classList.remove('show');
   nightHero.classList.add('show');
+  localStorage.setItem('storeDark', 'showDark')
 }
 
 function lightModeBG() {
@@ -82,11 +83,19 @@ function lightModeBG() {
   document.body.style.backgroundColor = "#ffffff";
   dayHero.classList.add('show');
   nightHero.classList.remove('show');
+  localStorage.removeItem('storeDark')
 }
 
 moon.addEventListener('click', darkModeBG);
 sun.addEventListener('click', lightModeBG);
 
+const DarkLocalStore = localStorage.getItem('storeDark')
+
+if(DarkLocalStore){
+  darkModeBG()
+}else{
+  lightModeBG()
+}
 
 
 

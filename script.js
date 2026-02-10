@@ -20,12 +20,14 @@ const nightHeroShy = document.getElementById('nightheroShy');
 // Initialize Hero Images
 // ============================================
 function initializeHeroImages() {
-  if (isDarkMode === true) {
-    nightHero.classList.add('show');
-    dayHero.classList.remove('show');
-  }else{
-    nightHero.classList.remove('show');
-    dayHero.classList.add('show');
+  if (dayHero && nightHero) {
+    if (isDarkMode === true) {
+      nightHero.classList.add('show');
+      dayHero.classList.remove('show');
+    }else{
+      nightHero.classList.remove('show');
+      dayHero.classList.add('show');
+    }
   }
 }
 initializeHeroImages();
@@ -56,8 +58,10 @@ function showDefaultHero() {
   }
 }
 
-rightCont.addEventListener('mouseover', showShyHero);
-rightCont.addEventListener('mouseout', showDefaultHero);
+if (rightCont) {
+  rightCont.addEventListener('mouseover', showShyHero);
+  rightCont.addEventListener('mouseout', showDefaultHero);
+}
 
 // ============================================
 // Dark Mode Functions
@@ -69,8 +73,10 @@ function darkModeBG() {
   sun.style.display = 'block';
   document.body.style.transition = "background-color 0.5s ease";
   document.body.style.backgroundColor = "#16161a";
-  dayHero.classList.remove('show');
-  nightHero.classList.add('show');
+  if (dayHero && nightHero) {
+    dayHero.classList.remove('show');
+    nightHero.classList.add('show');
+  }
   localStorage.setItem('storeDark', 'showDark')
 }
 
@@ -81,8 +87,10 @@ function lightModeBG() {
   moon.style.display = 'block';
   document.body.style.transition = "background-color 0.5s ease";
   document.body.style.backgroundColor = "#ffffff";
-  dayHero.classList.add('show');
-  nightHero.classList.remove('show');
+  if (dayHero && nightHero) {
+    dayHero.classList.add('show');
+    nightHero.classList.remove('show');
+  }
   localStorage.removeItem('storeDark')
 }
 
@@ -138,6 +146,7 @@ let i = 0;
 let isDeleting = false;
 
 function typeEffect() {
+  if (!element) return;
   if (!isDeleting && i < text.length) {
     element.innerHTML = text.substring(0, i + 1);
     i++;
@@ -159,7 +168,7 @@ function typeEffect() {
   }
 }
 
-typeEffect();
+if (element) typeEffect();
 
 
 
@@ -167,7 +176,8 @@ typeEffect();
 
 let attempt = 0;
 const submit = document.getElementById('submit');
-  
+
+if (submit) {
   submit.addEventListener('click', function(e) {
     e.preventDefault(); // prevent form from submitting
     
@@ -230,6 +240,7 @@ if (nameVal === '' && emailVal === '' && messageVal === '') {
 
     },2000)
   });
+}
 
 
 

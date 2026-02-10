@@ -1,0 +1,103 @@
+.projectSec1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 200px 20px 50px;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    background-color: var(--body);
+    transition: background-color 0.5s ease;
+}
+
+.projectSec1 .project-link{
+    text-decoration: none;
+    color: inherit;
+}
+
+.projectSec1 .frame{
+    background: linear-gradient(135deg, var(--card) 0%, var(--card) 100%);
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--stroke);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.projectSec1 .frame:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(99, 102, 241, 0.25);
+    border-color: var(--btn);
+}
+
+/* Light Mode Specific */
+body:not(.dark-mode) .projectSec1 .frame {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+}
+
+body:not(.dark-mode) .projectSec1 .frame:hover {
+    box-shadow: 0 12px 30px rgba(99, 102, 241, 0.2);
+    border-color: #6366f1;
+}
+
+/* Dark Mode Specific */
+body.dark-mode .projectSec1 .frame {
+    background: linear-gradient(135deg, #242629 0%, #1e1f23 100%);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid #3a3c42;
+}
+
+body.dark-mode .projectSec1 .frame:hover {
+    box-shadow: 0 12px 30px rgba(127, 90, 240, 0.3);
+    border-color: #7f5af0;
+}
+
+.projectSec1 .frame img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    object-fit: fill;
+    border-bottom: 1px solid var(--stroke);
+    transition: all 0.3s ease;
+}
+
+.projectSec1 .frame:hover img{
+    filter: brightness(1.05);
+}
+
+.projectSec1 .frame div{
+    padding: 20px 15px;
+    background-color: transparent;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projectSec1 .frame p{
+    margin: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--par);
+    text-align: center;
+    font-weight: 500;
+}
+
+body:not(.dark-mode) .projectSec1 .frame p {
+    color: #4a5568;
+}
+
+body.dark-mode .projectSec1 .frame p {
+    color: #94a1b2;
+}
+a{
+    text-decoration: none;
+}

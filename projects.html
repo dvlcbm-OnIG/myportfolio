@@ -7,6 +7,7 @@
   <title>Project</title>
 
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style2.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -21,18 +22,20 @@
     </div>
     <article>
       <ul>
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/projects.html">Projects</a></li>
-        <li><a href="/photos.html">Photos</a></li>
-        <li><a href="/me.html">About me</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="photos.html">Photos</a></li>
+        <li><a href="me.html">About me</a></li><br>
+        <span><i class="fa-solid fa-moon" id="moon"> Dark mode</i></span>
+        <span><i class="fa-regular fa-lightbulb" id="sun"> Light mode</i></span>
       </ul>
     </article>
   </section>
 
   <!-- NAVBAR -->
-  <nav>
+  <nav class="main-nav">
     <div class="left">
-      <span id="menuBar"><i class="fa-solid fa-bars"></i></span>
+      <span id="menuBar" ><i class="fa-solid fa-bars"></i></span>
       <span>RJ | Web Developer</span>
     </div>
     <div class="right">
@@ -41,7 +44,29 @@
       <a href="https://www.instagram.com/dvlcbm?igsh=aDh3NzlzYzFxcjF2"><i class="fa-brands fa-instagram"></i><span>Instagram</span></a>
       <a href="mailto:russeljeoff2@gmail.com"><i class="fa-solid fa-envelope"></i><span>Email</span></a>
     </div>
-  </nav>  
+  </nav>
+  <main>
+    <section class="projectSec1">
+      <a href="https://dvlcbm-onig.github.io/SecretFile./">
+        <div class="frame"><img src="images/valentine.jpg" alt="">
+        <div><p>Fun Valentine Game</p></div>
+      </div>
+    </a>
+      <a href="https://dvlcbm-onig.github.io/Css-animation-Random-Codes/">
+        <div class="frame"><img src="images/proj2.jpg" alt="">
+          <div><p>CSS Design Tool </p></div>
+        </div>
+      </a>
+      <a href="https://dvlcbm-onig.github.io/AlgorithmSORT/">
+        <div class="frame"><img src="images/proj3.jpg" alt="">
+          <div><p>AI-Programmed Sorting Numbers</p></div>
+        </div>
+      </a>
+      
+      
+      
+    </section>
+  </main>
 <script src="script.js"></script>
 </body>
 </html>

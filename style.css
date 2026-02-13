@@ -177,6 +177,19 @@ body.menu-open > *:not(.menu){
   display: flex;
   justify-content: space-between;
   width: 100%;
+  align-items: center;
+}
+
+#moon,
+#sun {
+  color: var(--card);
+  font-size: 1em;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#sun {
+  display: none;
 }
 
 .menu article {
@@ -186,31 +199,38 @@ body.menu-open > *:not(.menu){
 
 .menu article ul {
   width: 100%;
-  height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-}
+  list-style-type: none;
 
+}
+.menu article ul li i{
+  margin-right: 5px;
+}
+.menu article a{
+  padding: 5px;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  color: black;
+  width: 100%;
+  display: inline-block;
+  text-decoration: none;
+
+
+}
  .feature li{
   font-size: 10px;
   margin-left: 10px;
 }
 
-.menu li {
-  width: 100%;
-}
-
-.menu article li:hover,
+.menu article a:hover,
 .menu article #moon:hover,
 .menu article #sun:hover {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(253, 252, 253);
 }
 
-.menu article a {
-  text-decoration: none;
-  color: var(--par);
-}
 
 .menu .fa-github {
   opacity: 0;
@@ -220,15 +240,6 @@ body.menu-open > *:not(.menu){
   color: white;
 }
 
-#moon,
-#sun {
-  color: white;
-  font-size: 2em;
-}
-
-#sun {
-  display: none;
-}
 
 #menuBar i {
   border: 1px solid #1F1F1F;

@@ -289,7 +289,7 @@ body.menu-open > *:not(.menu){
 }
 
 .main-nav .right i {
-  margin-right: 3px;
+  margin-right: 6px;
   margin-left: 10px;
   font-size: 1.5em;
 }
@@ -312,6 +312,11 @@ body.menu-open > *:not(.menu){
 
   .menu {
     width: 75%;
+  }
+  .main-nav .right i {
+    margin-right: 3px;
+    margin-left: 10px;
+    font-size: 1em;
   }
 }
 

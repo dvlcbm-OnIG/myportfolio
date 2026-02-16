@@ -198,7 +198,8 @@ body.menu-open > *:not(.menu){
   transition: 0.3s ease;
   background-color: black;
 }
-#sun:hover{
+#sun:hover,
+.menu article a:hover{
   background-color: #fff;
 }
 #sun {
@@ -209,7 +210,6 @@ body.menu-open > *:not(.menu){
   width: 100%;
   height: 100%;
 }
-
 .menu article ul {
   width: 100%;
   display: flex;

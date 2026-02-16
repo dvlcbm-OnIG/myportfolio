@@ -69,6 +69,7 @@ body:not(.dark-mode) #contact .group form input,
 body:not(.dark-mode) #contact .group form textarea {
   border: 2px solid #e2e8f0;
   background-color: #f9fafb;
+  color: black;
 }
 
 body:not(.dark-mode) #contact .group form input:focus,
@@ -186,8 +187,20 @@ body.menu-open > *:not(.menu){
   font-size: 1em;
   border-radius: 10px;
   padding: 5px;
+  cursor: pointer;
+  border: 1px solid;
+  box-shadow: #1F1F1F 1px 2px 5px;
+  transition: 0.2s ease;
 }
-
+#moon:hover,
+#sun:hover{
+  transform: scale(1.05);
+  transition: 0.3s ease;
+  background-color: black;
+}
+#sun:hover{
+  background-color: #fff;
+}
 #sun {
   display: none;
 }
@@ -225,12 +238,6 @@ body.menu-open > *:not(.menu){
   margin-left: 10px;
 }
 
-.menu article a:hover,
-.menu article #moon:hover,
-.menu article #sun:hover {
-  background-color: rgb(253, 252, 253);
-}
-
 
 .menu .fa-github {
   opacity: 0;
@@ -247,6 +254,7 @@ body.menu-open > *:not(.menu){
   padding: 5px 6px;
   display: inline-block; /* needed for transform */
   transition: transform 0.3s ease; /* smoother animation */
+  cursor: pointer;
 }
 /* NAVBAR */
 .main-nav {
@@ -634,15 +642,15 @@ text-align: center;
   font-family: 'poppins', sans-serif;
   padding: 15px 20px;
   margin-bottom: 20px;
-  border: 2px solid var(--btnText
-);
+  border: 2px solid var(--btnText);
   outline: none;
   border-radius: 8px;
-  color: black;
+  color: white;
   transition: all 0.3s ease;
   box-sizing: border-box;
   width: 100%;
   background-color: var(--body);
+  cursor: pointer;
 }
 
 #contact .group .contact-form input:focus,

@@ -201,6 +201,9 @@ body.menu-open > *:not(.menu){
 #sun:hover,
 .menu article a:hover{
   background-color: #fff;
+  color: var(--btn);
+  font-size: 1.5rem;
+  transition: 0.2s ease;
 }
 #sun {
   display: none;
@@ -223,14 +226,14 @@ body.menu-open > *:not(.menu){
 }
 .menu article a{
   padding: 5px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 5px;
   border-radius: 10px;
   color: black;
   width: 100%;
   display: inline-block;
   text-decoration: none;
-
+  transition: 0.2s ease;
 
 }
  .feature li{

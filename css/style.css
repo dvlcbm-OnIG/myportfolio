@@ -278,27 +278,9 @@ body.menu-open > *:not(.menu){
   align-items: center;
 
 }
-
-.main-nav .left .name-cont{
-  position: relative;
-  width: 200px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  
-}
 .main-nav .left{
   display: flex;
   align-items: center;
-}
-.main-nav .left .name-cont #initialName{
-  position: absolute;
-
-}
-.main-nav .left .name-cont #fullName{
-  position: absolute;
-  opacity: 0;
- 
 }
 .main-nav .left i {
   margin-right: 10px;

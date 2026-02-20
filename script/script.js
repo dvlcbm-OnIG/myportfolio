@@ -244,3 +244,19 @@ if (nameVal === '' && emailVal === '' && messageVal === '') {
 
 
 
+//main nav name
+const initialName = document.getElementById('initialName')
+const fullName = document.getElementById('fullName')
+const nameContainer = document.querySelector('.main-nav .left .name-cont')
+
+if (nameContainer && initialName && fullName) {
+  nameContainer.addEventListener('mouseenter', () => {
+    initialName.style.opacity = '0'
+    fullName.style.opacity = '1'
+  })
+
+  nameContainer.addEventListener('mouseleave', () => {
+    initialName.style.opacity = '1'
+    fullName.style.opacity = '0'
+  })
+}

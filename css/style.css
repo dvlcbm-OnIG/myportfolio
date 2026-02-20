@@ -198,7 +198,9 @@ body.menu-open > *:not(.menu){
   transition: 0.3s ease;
   background-color: black;
 }
-#sun:hover,
+#sun:hover{
+  background-color: #fff;
+}
 .menu article a:hover{
   background-color: #fff;
   color: var(--btn);

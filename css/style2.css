@@ -23,7 +23,7 @@
     border-radius: 12px;
     overflow: hidden;
     border: 1px solid var(--stroke);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 20px 10px 25px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 

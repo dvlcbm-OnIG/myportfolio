@@ -242,5 +242,42 @@ if (nameVal === '' && emailVal === '' && messageVal === '') {
   });
 }
 
+//nav active indicator
+const aTags = document.querySelectorAll('.right a');
 
+aTags[0].addEventListener('click', ()=> {
+  localStorage.setItem('click1',"border")
+  localStorage.removeItem('click2')
+  localStorage.removeItem('click3')
+  localStorage.removeItem('click4')
 
+})
+
+aTags[1].addEventListener('click', ()=> {
+  localStorage.setItem('click2',"border")
+    localStorage.removeItem('click1')
+  localStorage.removeItem('click3')
+  localStorage.removeItem('click4')
+})
+aTags[2].addEventListener('click', ()=> {
+  localStorage.setItem('click3',"border")
+    localStorage.removeItem('click1')
+  localStorage.removeItem('click2')
+  localStorage.removeItem('click4')
+})
+aTags[3].addEventListener('click', ()=> {
+  localStorage.setItem('click4',"border")
+    localStorage.removeItem('click2')
+  localStorage.removeItem('click3')
+  localStorage.removeItem('click1')
+})
+ 
+if(localStorage.getItem("click1")){
+  aTags[0].style.color = '#6366f1'
+}else if(localStorage.getItem("click2")){
+  aTags[1].style.color = '#6366f1'
+}else if(localStorage.getItem("click3")){
+  aTags[2].style.color = '#6366f1'
+}else if(localStorage.getItem("click4")){
+  aTags[3].style.color = '#7f5af0'
+}

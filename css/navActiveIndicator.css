@@ -1,0 +1,35 @@
+:root {
+  --body: #16161a;
+  --head: #fffffe;
+  --par: #94a1b2;
+  --btn:#7f5af0 ;
+  --btnText: #fffffe;
+  --second: #72757e;
+  --stroke: #010101;
+  --card: #242629;
+}
+
+/* Light Mode */
+body:not(.dark-mode) {
+  --body: #f5f7fa;
+  --head: #1a202c;
+  --par: #4a5568;
+  --btn: #6366f1;
+  --btnText: #ffffff;
+  --second: #718096;
+  --stroke: #e2e8f0;
+  --card: #ffffff;
+}
+
+/*.main-nav .right a:active{
+    border-bottom: 3px solid var(--btn);
+
+}*/
+
+.main-nav .right a.nav-active {
+  color: var(--btn);
+}
+
+.main-nav .right.nav-hovering-sibling a.nav-active {
+  color: var(--head);
+}

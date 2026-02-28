@@ -302,7 +302,7 @@ body.menu-open > *:not(.menu){
 
 .main-nav .right a:hover {
   transform: scale(1.1);
-  color: var(--btn);
+  /*color: var(--btn);*/
 }
 
 .main-nav .right i {

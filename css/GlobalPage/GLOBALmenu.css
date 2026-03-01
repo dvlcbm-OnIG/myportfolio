@@ -5,7 +5,7 @@
   gap: 25px 0px;
   position: fixed;
   height: 100%;
-  width: 33%;
+  width: 300px;
   /* background-color: rgba(73, 73, 85, 1); */
   background-color: var(--btn);
   padding: 10px;

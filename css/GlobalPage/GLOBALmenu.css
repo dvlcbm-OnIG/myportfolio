@@ -1,0 +1,121 @@
+/* MENU */
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 25px 0px;
+  position: fixed;
+  height: 100%;
+  width: 33%;
+  /* background-color: rgba(73, 73, 85, 1); */
+  background-color: var(--btn);
+  padding: 10px;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease, filter 0.4s ease;
+  border-radius: 0px 5px 5px 0px;
+  border-right: 1px solid white;
+  pointer-events: auto;
+  top: 0;
+  z-index: 2;
+}
+
+.menu.show {
+  transform: translateX(0);
+  z-index: 2;
+}
+body > *:not(.menu) {
+  transition: filter 0.4s ease;
+}
+body.menu-open > *:not(.menu){
+  filter: blur(3px) ;
+ pointer-events: none;
+
+}
+
+.menu .nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+#moon,
+#sun {
+  color: var(--card);
+  font-size: 1em;
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+  border: 1px solid;
+  box-shadow: #1F1F1F 1px 2px 5px;
+  transition: 0.2s ease;
+}
+#moon:hover,
+#sun:hover{
+  transform: scale(1.05);
+  transition: 0.3s ease;
+  background-color: black;
+}
+#sun:hover{
+  background-color: #fff;
+}
+.menu article a:hover{
+  background-color: #fff;
+  color: var(--btn);
+  font-size: 1.5rem;
+  transition: 0.2s ease;
+}
+#sun {
+  display: none;
+}
+
+.menu article {
+  width: 100%;
+  height: 100%;
+}
+.menu article ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  list-style-type: none;
+
+}
+.menu article ul li i{
+  margin-right: 5px;
+}
+.menu article a{
+  padding: 5px;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  color: black;
+  width: 100%;
+  display: inline-block;
+  text-decoration: none;
+  transition: 0.2s ease;
+
+}
+ .feature li{
+  font-size: 10px;
+  margin-left: 10px;
+}
+
+
+.menu .fa-github {
+  opacity: 0;
+}
+
+#menuClose {
+  color: white;
+}
+
+
+#menuBar i {
+  border: 0.1px solid #4b4b4b;
+  border-radius: 6px;
+  padding: 5px 6px;
+  display: inline-block; /* needed for transform */
+  transition: transform 0.3s ease; /* smoother animation */
+  cursor: pointer;
+}
+

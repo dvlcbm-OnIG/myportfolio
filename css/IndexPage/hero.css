@@ -1,0 +1,124 @@
+/* HERO */
+.hero {
+  display: flex;
+  padding: 25px;
+  gap: 100px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 120px;
+  margin-bottom: 20px;
+}
+.hero .left {
+
+  padding: 20px;
+  border-radius: 10px;
+  
+  
+ 
+}
+
+.hero .left a {
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 8px;
+  margin-right: 10px;
+  color: var(--btnText);
+  background-color: var(--btn);
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.left a:hover{
+   transform: translateY(-2px);
+}
+.hero .left i{
+  margin-right: 5px;
+  font-size: 1.5em;
+}
+.hero .left span{
+  font-size: 1.5em;
+}
+
+.hero .left h2 {
+ height: 50px;
+  font-size: 2em;
+  margin-bottom: 20px;
+  
+}
+
+.hero .left p {
+  margin-bottom: 20px;
+ 
+}
+
+#typewriter {
+  color: var(--head);
+}
+
+p {
+  color: var(--par);
+}
+
+h1,
+.cell span {
+  color: var(--head);
+}
+.hero .hero-right{
+  display: flex;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.hero .hero-right img {
+  height: 250px;
+  border-radius: 50%;
+  box-shadow: 
+    0 20px 40px rgba(99, 102, 241, 0.25),
+    0 0 80px rgba(99, 102, 241, 0.15),
+    inset -2px -2px 8px rgba(0, 0, 0, 0.1);
+  border: 3px solid black;
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+/*hover effect on hero img*/
+.hero .hero-right #dayheroShy,
+.hero .hero-right #dayhero,
+.hero .hero-right #nightheroShy,
+.hero .hero-right #nighthero{
+  display: none;
+}
+.hero .hero-right #dayheroShy.show,
+.hero .hero-right #dayhero.show,
+.hero .hero-right #nightheroShy.show,
+.hero .hero-right #nighthero.show{
+  display: flex;
+}
+
+/*.hero .right img:hover{
+  transform: scale(1.1, 1.1);
+  transition: transform 0.3s ease;
+}*/
+@media (max-width: 912px) {
+  .hero{
+    flex-direction: column-reverse;
+    margin-bottom: 170px;
+  }
+
+  .scroll {
+    margin-left: 13px;
+  }
+
+  .hero .right img {
+    height: 250px;
+    margin-top: -75px;
+  }
+   .hero .left{
+    margin-top: -60px;
+   }
+  .hero .left p,
+  h2 {
+    padding: 0px 20px 20px 20px;
+    text-align: justify;
+  }
+  .hero .left i, 
+  .hero .left span{
+    font-size: 1rem;
+  }
+}

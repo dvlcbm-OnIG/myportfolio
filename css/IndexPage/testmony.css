@@ -1,0 +1,63 @@
+/* TESTIMONY */
+#test {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 250px;
+  padding-top: 100px;
+}
+
+.test {
+  display: flex;
+  padding: 0px 25px 25px 25px;
+  margin-top: 20px;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.test img {
+  height: 120px;
+  border-radius: 50%;
+  margin-top: -10px;
+}
+
+.inTest {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  border: 1px solid grey;
+  border-radius: 20px;
+  background-color: var(--btn);
+  transition: all 0.3s ease;
+}
+
+.inTest p,
+.inTest span {
+  color: var(--head);
+}
+
+.inTest span {
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.inTest:hover {
+  transform: translateY(-3px);
+}
+
+@media (max-width: 912px) {
+  .test {
+    flex-direction: column;
+    padding: 50px 30px;
+    gap: 60px;
+  }
+
+  .test img {
+    height: 90px;
+  }
+}

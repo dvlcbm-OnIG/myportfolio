@@ -1,0 +1,91 @@
+
+/* CONTACT */
+#contact {
+  padding: 25px;
+  padding-top: 100px;
+  margin-bottom: 200px;
+}
+#contact h1{
+  margin: auto;
+  text-align: center;
+}
+
+#contact .group {
+  display: flex;
+  gap: 30px;
+}
+
+#contact .group .text {
+  width: 550px;
+}
+
+#contact .group .contact-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.contact-form .form-group{
+  display: flex;
+  position: relative;
+}
+.contact-form .form-group label{
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  background-color: var(--body);
+  padding: 0px 5px;
+  transition: 0.2s ease;
+}
+.contact-form .form-group input:focus + label,
+.contact-form .form-group input:not(:placeholder-shown) + label,
+.contact-form .form-group textarea:focus + label,
+.contact-form .form-group textarea:not(:placeholder-shown) + label{
+  transform: translateY(-23px);
+  color: #6366f1;
+}
+
+#contact .contact-form input,
+#contact .contact-form textarea{
+  font-family: 'poppins', sans-serif;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border: 2px solid var(--btnText);
+  outline: none;
+  border-radius: 8px;
+  color: white;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: var(--body);
+  cursor: pointer;
+}
+
+#contact .group .contact-form input:focus,
+#contact .group .contact-form textarea:focus {
+  outline: none;
+  border-color: var(--btn);
+}
+
+button {
+  background-color: var(--btn);
+  color: var(--btnText);
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 912px) {
+  #contact .group {
+    flex-direction: column;
+  }
+
+  #contact .group .text {
+    width: 100%;
+    margin: 10px 0px;
+  }
+}

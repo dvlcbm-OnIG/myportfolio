@@ -4,6 +4,7 @@ const dayHeroShy = document.getElementById('dayheroShy');
 const nightHero = document.getElementById('nighthero');
 const nightHeroShy = document.getElementById('nightheroShy');
 
+let isDarkMode = false
 function initializeHeroImages() {
   if (dayHero && nightHero) {
     if (isDarkMode === true) {

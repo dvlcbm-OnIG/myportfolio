@@ -2,8 +2,6 @@ const moon = document.getElementById('moon');
 const sun = document.getElementById('sun');
 const body = document.body;
 
-let isDarkMode = false;
-
 function darkModeBG() {
   isDarkMode = true;
   body.classList.add('dark-mode');
